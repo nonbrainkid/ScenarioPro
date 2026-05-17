@@ -16,4 +16,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main:          path.resolve(__dirname, "index.html"),
+        analysis:      path.resolve(__dirname, "analysis.html"),
+        visualization: path.resolve(__dirname, "visualization.html"),
+        aiAssistant:   path.resolve(__dirname, "ai-assistant.html"),
+        about:         path.resolve(__dirname, "about.html"),
+      },
+    },
+  },
 });
