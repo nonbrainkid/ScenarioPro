@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-ассистент · SCENARIO·PRO</title>
+<meta name="description" content="Интеллектуальный чат-бот по сценарному анализу. Tidio AI, прогнозы 2024-2025.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rajdhani:wght@500;700&family=DM+Sans:wght@300;400;500&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="brand">SCENARIO·PRO</div>
+  <div class="sub">Connecting AI</div>
+  <div class="bar"></div>
+</div>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="analysis.html">Анализ</a></li>
+      <li><a href="visualization.html">Визуализация</a></li>
+      <li><a href="ai-assistant.html" class="active">AI-ассистент</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section-narrow reveal" style="padding-top:140px;">
+    <div class="section-label">AI · Глава 03</div>
+    <h1 class="section-title">AI <em>Ассистент</em></h1>
+    <p class="section-sub">Чат-бот, обученный на данных сценарного анализа. Задайте вопрос по прибыли, маржинальности, влиянию пандемии или прогнозам — ассистент ответит, опираясь на 15 точек данных и три модели.</p>
+
+    <div class="section-label mt-6">Подсказки · кликни, чтобы скопировать</div>
+    <div class="chips">
+      <button class="chip" data-text="Какой сценарий наиболее реалистичен для бизнеса в Казахстане?">Какой сценарий наиболее реалистичен?</button>
+      <button class="chip" data-text="Как COVID-19 повлиял на прибыль бизнеса по всем трём сценариям?">Как COVID повлиял на прибыль бизнеса?</button>
+      <button class="chip" data-text="Какой прогноз на 2024-2025 годы по реалистичному и оптимистичному сценарию?">Какой прогноз на 2024–2025?</button>
+      <button class="chip" data-text="Какая отрасль показала максимальную устойчивость в 2020 году?">Самая устойчивая отрасль 2020?</button>
+      <button class="chip" data-text="Что такое EVA и как он связан со сценарным анализом?">EVA и сценарный анализ</button>
+    </div>
+
+    <p class="section-sub mt-6" style="opacity:0.7;">→ Окошко чата открывается справа внизу. Ассистент работает на платформе Tidio AI и адаптирован под бизнес-контекст Казахстана.</p>
+  </section>
+
+  <!-- AI PREDICTIONS -->
+  <section class="section reveal">
+    <div class="section-label">AI-прогнозы</div>
+    <h2 class="section-title">Что будет <em>дальше</em></h2>
+    <p class="section-sub">Прогнозы сгенерированы регрессионной моделью на пятилетней истории. Доверительный интервал — 80%.</p>
+
+    <div class="predictions">
+      <div class="pred-card reveal delay-1">
+        <div class="ico">▲</div>
+        <div class="pred-year">Прогноз · 2024</div>
+        <div class="pred-num"><span data-count="18" data-suffix="%">0%</span></div>
+        <p>Рост прибыли к реалистичному сценарию 2023. Драйверы: устойчивый внутренний спрос, восстановление логистики, рост цен на сырьевые товары.</p>
+      </div>
+      <div class="pred-card reveal delay-2">
+        <div class="ico">✦</div>
+        <div class="pred-year">Прогноз · 2025</div>
+        <div class="pred-num"><span data-count="52" data-suffix="%">0%</span></div>
+        <p>Маржа выходит на уровень оптимистичного сценария. Условие — диверсификация источников выручки и выход на экспортные рынки СНГ.</p>
+      </div>
+      <div class="pred-card reveal delay-3">
+        <div class="ico">⚠</div>
+        <div class="pred-year">Рекомендация</div>
+        <div class="pred-num">3×</div>
+        <p>Диверсификация источников дохода — минимум три независимых канала. Это снижает риск ухода в пессимистичный коридор при внешнем шоке.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI METHODOLOGY -->
+  <section class="section section-narrow reveal">
+    <div class="section-label">Как работает ассистент</div>
+    <h2 class="section-title">Под капотом <em>интеллекта</em></h2>
+    <div class="prose mt-4">
+      <p>Ассистент построен на платформе <strong>Tidio AI</strong> — облачное решение, использующее GPT-семейство для генерации ответов в реальном времени. База знаний бота включает 15 точек данных проекта (3 сценария × 5 лет), методологию «что-если», ключевые экономические события 2019–2023.</p>
+
+      <p>Дополнительно ассистент обучен отвечать на вопросы по сопутствующим темам: <strong>EVA, NPV, IRR, маржинальный анализ, точка безубыточности</strong>. При нехватке контекста бот честно сообщает об ограничениях и предлагает обратиться к разделу «Анализ».</p>
+
+      <p>Чип-подсказки выше копируют готовые вопросы в буфер обмена — просто вставьте в окно чата справа внизу.</p>
+    </div>
+  </section>
+
+</main>
+
+<button id="back-top" aria-label="Наверх">↑</button>
+
+<div id="player">
+  <div class="track-info"><span class="note">♪</span> Focus Grid <span class="sub">· Suno AI</span></div>
+  <div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="time" id="time">0:00 / 0:00</div>
+  <div class="controls"><button id="play-btn" aria-label="Воспроизвести">▶</button></div>
+  <audio id="bg-audio" src="assets/focus-grid.mp3" preload="metadata" loop></audio>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+      <p>Платформа сценарного планирования прибыли. ИКТ-проект НАО «Университет Нархоз», Школа цифровых технологий.</p>
+    </div>
+    <div class="footer-info">
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="analysis.html">Анализ</a></li>
+          <li><a href="visualization.html">Визуализация</a></li>
+          <li><a href="ai-assistant.html">AI-ассистент</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Авторы</h5>
+        <p>Кузьмина Регина Эдуардовна<br>Атласов Алексей Сергеевич<br><br>Менеджмент BBA · 1 курс<br>Рук.: Миркасимова Т.Ш.</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      ИКТ · 2025<br>
+      Школа цифровых технологий<br>
+      НАО «Университет Нархоз»<br>
+      <span class="copy">© 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<!-- Tidio AI chat-bot -->
+<script src="//code.tidio.co/wmvbengwk7albnj8q96wh5530tfnavk4.js" async></script>
+</body>
+</html>

@@ -1,48 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProfitVision AI</title>
-    <meta name="description" content="ProfitVision AI – Business analytics powered by artificial intelligence. Explore AI tools, dynamic what-if tables, and integrated data insights." />
-    <meta name="keywords" content="business analytics, AI tools, profit analysis, what-if scenarios, ProfitVision AI" />
-    <meta name="author" content="OnSpace" />
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCENARIO·PRO — Анализ прибыли «Что-если»</title>
+<meta name="description" content="Интерактивная платформа сценарного планирования прибыли для бизнеса. ИКТ-проект, НАО «Университет Нархоз», 2025.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rajdhani:wght@500;700&family=DM+Sans:wght@300;400;500&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.onspace.ai" />
-    <meta property="og:title" content="ProfitVision AI" />
-    <meta property="og:description" content="ProfitVision AI – Business analytics powered by artificial intelligence." />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="OnSpace.AI" />
-    <meta property="og:locale" content="en_US" />
+<!-- LOADER -->
+<div id="loader">
+  <div class="brand">SCENARIO·PRO</div>
+  <div class="sub">Profit · What-if · Scenario Planning</div>
+  <div class="bar"></div>
+</div>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.onspace.ai" />
-    <meta name="twitter:title" content="ProfitVision AI" />
-    <meta name="twitter:description" content="ProfitVision AI – Business analytics powered by artificial intelligence." />
-    <meta name="twitter:image" content="/og-image.jpg" />
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="analysis.html">Анализ</a></li>
+      <li><a href="visualization.html">Визуализация</a></li>
+      <li><a href="ai-assistant.html">AI-ассистент</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+</header>
 
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ProfitVision AI",
-      "url": "https://www.onspace.ai",
-      "description": "ProfitVision AI – Business analytics powered by artificial intelligence."
-    }
-    </script>
-  </head>
+<main>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <div class="hero-label">ИКТ ПРОЕКТ · НАРХОЗ · 2025</div>
+      <h1 class="hero-title">АНАЛИЗ ПРИБЫЛИ<span class="hero-title-gold">«Что-если»</span></h1>
+      <p class="hero-desc">Интерактивная платформа сценарного планирования для современного бизнеса Казахстана. Три модели будущего — оптимистичная, реалистичная, пессимистичная — построены на пятилетней базе финансовых показателей.</p>
+      <div class="hero-cta-row">
+        <a href="analysis.html" class="btn">Исследовать данные</a>
+        <a href="visualization.html" class="btn btn-ghost">Графики</a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section reveal">
+    <div class="section-label">Платформа в цифрах</div>
+    <h2 class="section-title">Сценарии. Данные. <em>Прибыль.</em></h2>
+    <div class="stats-grid mt-6">
+      <div class="stat-card reveal delay-1">
+        <span class="stat-number" data-count="3">0</span>
+        <div class="stat-label">Сценария анализа</div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <span class="stat-number" data-count="5">0</span>
+        <div class="stat-label">Лет данных · 2019–2023</div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <span class="stat-number" data-count="17">0</span>
+        <div class="stat-label">Финансовых показателей</div>
+      </div>
+      <div class="stat-card reveal delay-4">
+        <span class="stat-number" data-count="∞">∞</span>
+        <div class="stat-label">Возможностей роста</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KINETIC BANNER -->
+  <div class="kinetic-banner reveal">
+    <div class="kinetic-track">
+      <span>What-if Analysis</span><span class="dot">✦</span>
+      <span>Scenario Planning</span><span class="dot">✦</span>
+      <span>Profit Forecasting</span><span class="dot">✦</span>
+      <span>Что-если</span><span class="dot">✦</span>
+      <span>Бизнес-стратегия</span><span class="dot">✦</span>
+      <span>What-if Analysis</span><span class="dot">✦</span>
+      <span>Scenario Planning</span><span class="dot">✦</span>
+      <span>Profit Forecasting</span><span class="dot">✦</span>
+      <span>Что-если</span><span class="dot">✦</span>
+      <span>Бизнес-стратегия</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- AI GALLERY -->
+  <section class="section reveal">
+    <div class="section-label">Сгенерировано нейросетью</div>
+    <h2 class="section-title">AI <em>Визуализации</em></h2>
+    <p class="section-sub">Концептуальные изображения сценарного планирования. Создано в Google Gemini · Nano Banana 2.</p>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="gallery-card"><img src="assets/gallery-1.png" alt="AI визуализация сценария 1"><div class="caption"><span>Сценарий · α</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-2.png" alt="AI визуализация сценария 2"><div class="caption"><span>Сценарий · β</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-3.png" alt="AI визуализация сценария 3"><div class="caption"><span>Сценарий · γ</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-4.png" alt="AI визуализация сценария 4"><div class="caption"><span>Сценарий · δ</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <!-- duplicate for seamless loop -->
+        <div class="gallery-card"><img src="assets/gallery-1.png" alt="AI визуализация сценария 1"><div class="caption"><span>Сценарий · α</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-2.png" alt="AI визуализация сценария 2"><div class="caption"><span>Сценарий · β</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-3.png" alt="AI визуализация сценария 3"><div class="caption"><span>Сценарий · γ</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+        <div class="gallery-card"><img src="assets/gallery-4.png" alt="AI визуализация сценария 4"><div class="caption"><span>Сценарий · δ</span><span class="tag">Gemini · Nano Banana 2</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO TO METHOD -->
+  <section class="section section-narrow reveal">
+    <div class="section-label">Метод</div>
+    <h2 class="section-title">Что такое анализ <em>«Что-если»</em></h2>
+    <p class="section-sub">«Что-если» (What-if Analysis) — методология стратегического планирования, при которой моделируются различные варианты развития событий на основе изменения ключевых переменных: выручки, затрат, темпа роста рынка, маржинальности. Платформа SCENARIO·PRO визуализирует три параллельных будущего и помогает бизнесу принимать решения, не дожидаясь, пока эти будущие наступят.</p>
+    <div class="hero-cta-row" style="justify-content:flex-start; margin-top:1rem;">
+      <a href="analysis.html" class="btn">Перейти к анализу</a>
+      <a href="about.html" class="btn btn-ghost">О проекте</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- BACK TO TOP -->
+<button id="back-top" aria-label="Наверх">↑</button>
+
+<!-- MUSIC PLAYER -->
+<div id="player">
+  <div class="track-info">
+    <span class="note">♪</span> Focus Grid <span class="sub">· Suno AI</span>
+  </div>
+  <div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="time" id="time">0:00 / 0:00</div>
+  <div class="controls">
+    <button id="play-btn" aria-label="Воспроизвести">▶</button>
+  </div>
+  <audio id="bg-audio" src="assets/focus-grid.mp3" preload="metadata" loop></audio>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+      <p>Платформа сценарного планирования прибыли. ИКТ-проект НАО «Университет Нархоз», Школа цифровых технологий.</p>
+    </div>
+    <div class="footer-info">
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="analysis.html">Анализ</a></li>
+          <li><a href="visualization.html">Визуализация</a></li>
+          <li><a href="ai-assistant.html">AI-ассистент</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Авторы</h5>
+        <p>Кузьмина Регина Эдуардовна<br>Атласов Алексей Сергеевич<br><br>Менеджмент BBA · 1 курс<br>Рук.: Миркасимова Т.Ш.</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      ИКТ · 2025<br>
+      Школа цифровых технологий<br>
+      НАО «Университет Нархоз»<br>
+      <span class="copy">© 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>

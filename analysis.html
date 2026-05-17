@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анализ · SCENARIO·PRO</title>
+<meta name="description" content="Аналитический разбор трёх сценариев прибыли, динамическая таблица 2019–2023, AI-аватар презентации.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rajdhani:wght@500;700&family=DM+Sans:wght@300;400;500&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="brand">SCENARIO·PRO</div>
+  <div class="sub">Loading analysis</div>
+  <div class="bar"></div>
+</div>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="analysis.html" class="active">Анализ</a></li>
+      <li><a href="visualization.html">Визуализация</a></li>
+      <li><a href="ai-assistant.html">AI-ассистент</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="section section-narrow reveal" style="padding-top:140px;">
+    <div class="section-label">Аналитика · Глава 01</div>
+    <h1 class="section-title">Три сценария — <em>одно решение</em></h1>
+    <p class="section-sub">Сценарный анализ «Что-если» позволяет менеджменту увидеть бизнес одновременно через три линзы: лучший возможный исход, наиболее вероятный исход и худший сценарий. Решения, принятые на пересечении трёх моделей, оказываются устойчивее, чем основанные на единственном прогнозе.</p>
+  </section>
+
+  <!-- TWO-COLUMN ANALYSIS -->
+  <section class="section reveal">
+    <div class="analysis-grid">
+      <div class="prose">
+        <h3>Методология</h3>
+        <p>Платформа SCENARIO·PRO моделирует <strong>три параллельных будущих</strong>: оптимистичный сценарий допускает экспансию, рост спроса и положительную динамику маржи; реалистичный сценарий калибруется по фактическим показателям и среднеотраслевым темпам; пессимистичный — закладывает шоки, падение выручки и кризис ликвидности.</p>
+
+        <p>База данных охватывает <strong>пять лет</strong> — с 2019 по 2023. В качестве референса использованы агрегированные показатели среднего по отрасли казахстанского предприятия с годовым оборотом 400 млн – 1,3 млрд тенге. Все цифры пересчитаны в единый формат и сведены к трём ключевым категориям: выручка, операционные затраты, чистая прибыль.</p>
+
+        <div class="pullquote">Сценарный анализ — это не предсказание. Это страховка от удивления. Менеджер, видевший три будущих, не растеряется ни в одном из них.</div>
+
+        <h3>Контекст Казахстана</h3>
+        <p>2020 год — единственный в выборке, когда пессимистичный сценарий показывает <strong>отрицательную прибыль</strong>. Это прямое следствие пандемии COVID-19: ограничения, разрыв логистики, снижение потребительской активности. Реалистичный сценарий в том же году теряет 22% роста относительно 2019. Оптимистичный, напротив, демонстрирует устойчивость +7,4% — что соответствует поведению экспорто-ориентированных компаний (нефтегаз, металлы), сохранивших валютную выручку.</p>
+
+        <p>2021–2023 — годы восстановления. Оптимистичный и реалистичный сценарии возвращаются к двузначным темпам роста, пессимистичный — выходит из минуса. К 2023 году разрыв между лучшим и худшим сценарием достигает <strong>9,4-кратной величины по прибыли</strong>, что указывает на критическую важность диверсификации.</p>
+
+        <h3>Главные выводы</h3>
+        <p>Маржа оптимистичного сценария растёт с 40% до 52% — это эффект масштаба и оптимизации производственных затрат. Реалистичный держит коридор 25–40%. Пессимистичный остаётся в зоне 10–14%, балансируя на грани операционной устойчивости. Вывод управленческий: компании, попавшие в пессимистичный коридор, должны фокусироваться не на росте, а на <strong>сохранении ликвидности и сокращении операционного риска</strong>.</p>
+      </div>
+
+      <aside class="metric-stack">
+        <div class="metric-row reveal">
+          <div class="label">Лучшая прибыль · 2023</div>
+          <div class="value">686 млн ₸</div>
+          <div class="meta">Оптимистичный сценарий · маржа 52%</div>
+        </div>
+        <div class="metric-row reveal delay-1">
+          <div class="label">Худший год · 2020</div>
+          <div class="value" style="color:#8B0000">−31 млн ₸</div>
+          <div class="meta">Пессимистичный · единственный убыток</div>
+        </div>
+        <div class="metric-row reveal delay-2">
+          <div class="label">Разрыв опт./песс. · 2023</div>
+          <div class="value">9,4×</div>
+          <div class="meta">По чистой прибыли</div>
+        </div>
+        <div class="metric-row reveal delay-3">
+          <div class="label">Средняя маржа · реал.</div>
+          <div class="value">33%</div>
+          <div class="meta">Базовый коридор бизнеса</div>
+        </div>
+        <div class="metric-row reveal delay-4">
+          <div class="label">Темп роста · 2023 (реал.)</div>
+          <div class="value" style="color:#1A6B3C">+23,2%</div>
+          <div class="meta">К предыдущему году</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SCENARIO CARDS -->
+  <section class="section reveal">
+    <div class="section-label">Три сценария</div>
+    <h2 class="section-title">Будущее в <em>трёх линзах</em></h2>
+
+    <div class="scenarios-grid">
+      <div class="scenario-card optimistic reveal delay-1">
+        <div class="icon">↑</div>
+        <h3>Оптимистичный</h3>
+        <div class="big-num">+686 млн ₸</div>
+        <div class="num-label">Прибыль 2023 · маржа 52%</div>
+        <div class="insight">Экспансия рынка, рост среднего чека, оптимизация R&D. Темпы роста выручки опережают рост затрат — классический сценарий лидера отрасли.</div>
+      </div>
+      <div class="scenario-card realistic reveal delay-2">
+        <div class="icon">→</div>
+        <h3>Реалистичный</h3>
+        <div class="big-num">+356 млн ₸</div>
+        <div class="num-label">Прибыль 2023 · маржа 40%</div>
+        <div class="insight">Базовый сценарий, откалиброванный по фактическим данным отрасли. Стабильный рост на уровне 23% в год, контролируемые затраты, диверсифицированная клиентская база.</div>
+      </div>
+      <div class="scenario-card pessimistic reveal delay-3">
+        <div class="icon">↓</div>
+        <h3>Пессимистичный</h3>
+        <div class="big-num">+73 млн ₸</div>
+        <div class="num-label">Прибыль 2023 · маржа 14%</div>
+        <div class="insight">Минимальная маржинальность, выживание на пределе операционной эффективности. Любой внешний шок (как в 2020) уводит сценарий в минус. Стратегия — сокращение издержек, не рост.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC TABLE -->
+  <section class="section reveal">
+    <div class="section-label">Динамические данные</div>
+    <h2 class="section-title">Полная <em>таблица сценариев</em></h2>
+    <p class="section-sub">Фильтруйте по году. Сортируйте по любому столбцу — клик на заголовок. Все суммы в тенге, рост — год-к-году.</p>
+
+    <div class="table-controls">
+      <button class="year-filter active" data-year="all">Все годы</button>
+      <button class="year-filter" data-year="2019">2019</button>
+      <button class="year-filter" data-year="2020">2020</button>
+      <button class="year-filter" data-year="2021">2021</button>
+      <button class="year-filter" data-year="2022">2022</button>
+      <button class="year-filter" data-year="2023">2023</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th data-key="year">Год<span class="arr">▾</span></th>
+            <th data-key="scenario">Сценарий<span class="arr">▾</span></th>
+            <th data-key="revenue">Выручка<span class="arr">▾</span></th>
+            <th data-key="costs">Затраты<span class="arr">▾</span></th>
+            <th data-key="profit">Прибыль<span class="arr">▾</span></th>
+            <th data-key="margin">Маржа %<span class="arr">▾</span></th>
+            <th data-key="growth">Темп роста<span class="arr">▾</span></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- AI AVATAR VIDEO -->
+  <section class="section reveal">
+    <div class="section-label">AI-презентация</div>
+    <h2 class="section-title">Презентация проекта · <em>AI-аватар</em></h2>
+    <p class="section-sub">Виртуальный спикер озвучивает ключевые выводы проекта. Исходный портрет сгенерирован Google Gemini, оживлён в Higgsfield AI, голос синтезирован в HeyGen.</p>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="header"><span>● LIVE · AI SPEAKER</span><span>HD · 1080p</span></div>
+        <video controls preload="metadata" poster="assets/ai-avatar.png">
+          <source src="assets/ai-character.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <div class="footer">AI-аватар создан в Higgsfield AI и озвучен HeyGen. Презентует ключевые выводы сценарного анализа «Что-если» для бизнеса.</div>
+      </div>
+      <div class="avatar-card">
+        <div class="frame"><img src="assets/ai-avatar.png" alt="AI-портрет, исходный кадр"></div>
+        <h4>Исходный портрет</h4>
+        <p>Статичный AI-портрет, сгенерированный нейросетью. Затем анимирован в Higgsfield AI: добавлена мимика, синхронизация губ, движение глаз.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button id="back-top" aria-label="Наверх">↑</button>
+
+<div id="player">
+  <div class="track-info">
+    <span class="note">♪</span> Focus Grid <span class="sub">· Suno AI</span>
+  </div>
+  <div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="time" id="time">0:00 / 0:00</div>
+  <div class="controls"><button id="play-btn" aria-label="Воспроизвести">▶</button></div>
+  <audio id="bg-audio" src="assets/focus-grid.mp3" preload="metadata" loop></audio>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+      <p>Платформа сценарного планирования прибыли. ИКТ-проект НАО «Университет Нархоз», Школа цифровых технологий.</p>
+    </div>
+    <div class="footer-info">
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="analysis.html">Анализ</a></li>
+          <li><a href="visualization.html">Визуализация</a></li>
+          <li><a href="ai-assistant.html">AI-ассистент</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Авторы</h5>
+        <p>Кузьмина Регина Эдуардовна<br>Атласов Алексей Сергеевич<br><br>Менеджмент BBA · 1 курс<br>Рук.: Миркасимова Т.Ш.</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      ИКТ · 2025<br>
+      Школа цифровых технологий<br>
+      НАО «Университет Нархоз»<br>
+      <span class="copy">© 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

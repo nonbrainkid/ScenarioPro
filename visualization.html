@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Визуализация · SCENARIO·PRO</title>
+<meta name="description" content="Интерактивные графики Chart.js: динамика прибыли, сравнение сценариев, структура затрат.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rajdhani:wght@500;700&family=DM+Sans:wght@300;400;500&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="loader">
+  <div class="brand">SCENARIO·PRO</div>
+  <div class="sub">Rendering charts</div>
+  <div class="bar"></div>
+</div>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="analysis.html">Анализ</a></li>
+      <li><a href="visualization.html" class="active">Визуализация</a></li>
+      <li><a href="ai-assistant.html">AI-ассистент</a></li>
+      <li><a href="about.html">О проекте</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="section section-narrow reveal" style="padding-top:140px;">
+    <div class="section-label">Визуализация · Глава 02</div>
+    <h1 class="section-title">Данные, которые <em>можно увидеть</em></h1>
+    <p class="section-sub">Три интерактивных графика, построенных на одной базе данных. Линия — динамика, горизонтальный бар — сравнение, кольцо — структура. Наведите курсор для деталей.</p>
+  </section>
+
+  <!-- CHART 1 — LINE -->
+  <section class="section reveal">
+    <div class="chart-card">
+      <h3>Динамика прибыли · 2019–2023</h3>
+      <div class="chart-meta">CHART · 01 · LINE · 3 SCENARIOS</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="chart-line"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHART 2 + 3 -->
+  <section class="section reveal">
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Сравнение сценариев · 2023</h3>
+        <div class="chart-meta">CHART · 02 · HORIZONTAL BAR</div>
+        <div class="chart-canvas-wrap">
+          <canvas id="chart-bar"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h3>Структура затрат</h3>
+        <div class="chart-meta">CHART · 03 · DOUGHNUT</div>
+        <div class="chart-canvas-wrap">
+          <canvas id="chart-doughnut"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENARIO COMPARE -->
+  <section class="section reveal">
+    <div class="section-label">Сравнение по годам</div>
+    <h2 class="section-title">Переключите <em>2022 / 2023</em></h2>
+    <p class="section-sub">Анимация чисел и прогресс-баров плавно пересчитывает все три сценария при переключении года.</p>
+
+    <div class="compare-toggle">
+      <button data-year="2022">2022</button>
+      <button data-year="2023" class="active">2023</button>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card" data-scen="optimistic">
+        <h4>Оптимистичный</h4>
+        <div class="bar-row" data-field="revenue">
+          <div class="bar-label"><span>Выручка</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="costs">
+          <div class="bar-label"><span>Затраты</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="profit">
+          <div class="bar-label"><span>Прибыль</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="margin">
+          <div class="bar-label"><span>Маржа</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="compare-card" data-scen="realistic">
+        <h4>Реалистичный</h4>
+        <div class="bar-row" data-field="revenue">
+          <div class="bar-label"><span>Выручка</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="costs">
+          <div class="bar-label"><span>Затраты</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="profit">
+          <div class="bar-label"><span>Прибыль</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="margin">
+          <div class="bar-label"><span>Маржа</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="compare-card" data-scen="pessimistic">
+        <h4>Пессимистичный</h4>
+        <div class="bar-row" data-field="revenue">
+          <div class="bar-label"><span>Выручка</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="costs">
+          <div class="bar-label"><span>Затраты</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="profit">
+          <div class="bar-label"><span>Прибыль</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-field="margin">
+          <div class="bar-label"><span>Маржа</span><span class="val">—</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASONRY AI GALLERY -->
+  <section class="section reveal">
+    <div class="section-label">AI Imagery</div>
+    <h2 class="section-title">Сетка <em>сгенерированных</em> сцен</h2>
+    <p class="section-sub">Каждое изображение — клик для увеличения. Создано в Google Gemini · Nano Banana 2.</p>
+
+    <div class="masonry">
+      <div class="m-item"><img src="assets/gallery-1.png" alt="AI image 1"><div class="m-overlay">Gemini AI · Nano Banana 2 · α</div></div>
+      <div class="m-item"><img src="assets/gallery-2.png" alt="AI image 2"><div class="m-overlay">Gemini AI · Nano Banana 2 · β</div></div>
+      <div class="m-item"><img src="assets/gallery-3.png" alt="AI image 3"><div class="m-overlay">Gemini AI · Nano Banana 2 · γ</div></div>
+      <div class="m-item"><img src="assets/gallery-4.png" alt="AI image 4"><div class="m-overlay">Gemini AI · Nano Banana 2 · δ</div></div>
+      <div class="m-item"><img src="assets/hero-bg.png" alt="AI image 5"><div class="m-overlay">Gemini AI · Nano Banana 2 · ε</div></div>
+    </div>
+  </section>
+
+</main>
+
+<button id="back-top" aria-label="Наверх">↑</button>
+
+<div id="player">
+  <div class="track-info"><span class="note">♪</span> Focus Grid <span class="sub">· Suno AI</span></div>
+  <div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="time" id="time">0:00 / 0:00</div>
+  <div class="controls"><button id="play-btn" aria-label="Воспроизвести">▶</button></div>
+  <audio id="bg-audio" src="assets/focus-grid.mp3" preload="metadata" loop></audio>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand-logo">SCENARIO<span class="pro">PRO</span><span class="dot"></span></a>
+      <p>Платформа сценарного планирования прибыли. ИКТ-проект НАО «Университет Нархоз», Школа цифровых технологий.</p>
+    </div>
+    <div class="footer-info">
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="analysis.html">Анализ</a></li>
+          <li><a href="visualization.html">Визуализация</a></li>
+          <li><a href="ai-assistant.html">AI-ассистент</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Авторы</h5>
+        <p>Кузьмина Регина Эдуардовна<br>Атласов Алексей Сергеевич<br><br>Менеджмент BBA · 1 курс<br>Рук.: Миркасимова Т.Ш.</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      ИКТ · 2025<br>
+      Школа цифровых технологий<br>
+      НАО «Университет Нархоз»<br>
+      <span class="copy">© 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
