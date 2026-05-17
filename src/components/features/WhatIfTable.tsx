@@ -1,54 +1,64 @@
-const columns = ["Scenario", "Revenue ($)", "Cost ($)", "Profit ($)", "Margin (%)"];
+const columns = ["Сценарий", "Доход ($)", "Затраты ($)", "Прибыль ($)", "Маржа (%)"];
 const rows = [
-  ["Base Case", "—", "—", "—", "—"],
-  ["Optimistic +10%", "—", "—", "—", "—"],
-  ["Pessimistic −10%", "—", "—", "—", "—"],
-  ["Custom Input", "[ editable ]", "[ editable ]", "—", "—"],
+  ["Базовый", "120,000", "45,000", "75,000", "62.5%"],
+  ["Оптимистичный (+10%)", "132,000", "49,500", "82,500", "62.5%"],
+  ["Пессимистичный (-10%)", "108,000", "40,500", "67,500", "62.5%"],
+  ["Пользовательский", "[ ввод ]", "[ ввод ]", "—", "—"],
 ];
 
 const WhatIfTable = () => {
   return (
     <section
       id="analytics"
-      aria-label="Dynamic What-If Table Placeholder"
-      className="w-full border-2 border-dashed border-gray-400 bg-gray-100 rounded-lg overflow-hidden"
+      aria-label="Таблица сценариев 'Что-если'"
+      className="w-full premium-card overflow-hidden !p-0"
     >
-      {/* Section tag */}
-      <div className="border-b border-dashed border-gray-400 bg-gray-200 px-4 py-1.5 flex items-center justify-between">
-        <span className="wireframe-label">Section · Dynamic What-If Table</span>
-        <span className="text-xs text-gray-400 font-medium">Interactive · Scenario Analysis</span>
+      <div className="bg-emerald-950 px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest">Аналитический инструмент</span>
+          <h2 className="text-2xl font-bold text-white">Динамический анализ «Что-если»</h2>
+        </div>
+        <div className="flex gap-2">
+          <button className="bg-emerald-500 hover:bg-emerald-400 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors">
+            Сохранить отчет
+          </button>
+          <button className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors border border-white/10">
+            Экспорт
+          </button>
+        </div>
       </div>
 
-      <div className="p-6">
-        <p className="wireframe-title mb-4">[ Dynamic 'What-If' Table Placeholder ]</p>
-
-        {/* Table skeleton */}
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-xs" aria-label="What-If Scenario Table Wireframe">
+      <div className="p-8">
+        <div className="overflow-x-auto rounded-xl border border-emerald-100 shadow-sm">
+          <table className="w-full border-collapse text-sm">
             <thead>
-              <tr className="bg-gray-300">
+              <tr className="bg-emerald-50/50">
                 {columns.map((col) => (
                   <th
                     key={col}
-                    className="border border-gray-400 px-3 py-2 text-left font-semibold text-gray-600 uppercase tracking-wider"
+                    className="px-6 py-4 text-left font-bold text-emerald-900 uppercase tracking-tight border-b border-emerald-100"
                   >
                     {col}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-emerald-50">
               {rows.map((row, ri) => (
                 <tr
                   key={ri}
-                  className={ri % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  className="hover:bg-emerald-50/30 transition-colors group"
                 >
                   {row.map((cell, ci) => (
                     <td
                       key={ci}
-                      className="border border-gray-300 px-3 py-2 text-gray-500"
+                      className={`px-6 py-4 text-gray-600 ${ci === 0 ? "font-bold text-gray-900" : ""}`}
                     >
-                      {cell}
+                      {cell === "[ ввод ]" ? (
+                        <span className="text-emerald-500 font-bold bg-emerald-50 px-2 py-1 rounded cursor-pointer hover:bg-emerald-100">
+                          {cell}
+                        </span>
+                      ) : cell}
                     </td>
                   ))}
                 </tr>
@@ -57,9 +67,12 @@ const WhatIfTable = () => {
           </table>
         </div>
 
-        <p className="text-xs text-gray-400 mt-4 text-center">
-          User-adjustable inputs will dynamically recalculate profit projections
-        </p>
+        <div className="mt-6 flex items-center gap-3 bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/50">
+          <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xs">!</div>
+          <p className="text-xs text-emerald-800 font-medium">
+            Изменяйте параметры в строке «Пользовательский» для мгновенного пересчета прогнозируемой прибыли и рентабельности.
+          </p>
+        </div>
       </div>
     </section>
   );

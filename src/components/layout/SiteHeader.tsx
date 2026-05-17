@@ -1,30 +1,29 @@
 const navLinks = [
-  { label: "Home", href: "#", active: true },
-  { label: "Analytics", href: "#analytics", active: false },
-  { label: "AI Tools", href: "#ai-tools", active: false },
-  { label: "Media", href: "#media", active: false },
-  { label: "Contact", href: "#contact", active: false },
+  { label: "Главная", href: "#", active: true },
+  { label: "Аналитика", href: "#analytics", active: false },
+  { label: "AI Инструменты", href: "#ai-tools", active: false },
+  { label: "Медиа", href: "#media", active: false },
+  { label: "Контакты", href: "#contact", active: false },
 ];
 
 const SiteHeader = () => {
   return (
-    <header className="w-full border-b border-gray-300 bg-white sticky top-0 z-40">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="w-full sticky top-0 z-50 glass-effect">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          {/* Logo icon placeholder */}
-          <div className="w-8 h-8 border-2 border-gray-900 rounded bg-gray-900 flex items-center justify-center">
-            <span className="text-white text-xs font-black leading-none">PV</span>
+        <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:rotate-12 transition-transform duration-300">
+            <span className="text-white text-lg font-black leading-none">PV</span>
           </div>
-          <span className="text-base font-black tracking-tight text-gray-900 select-none">
-            ProfitVision <span className="font-light text-gray-500">AI</span>
+          <span className="text-xl font-extrabold tracking-tight text-gray-900 select-none">
+            ProfitVision <span className="text-emerald-600">AI</span>
           </span>
         </div>
 
         {/* Navigation */}
-        <nav aria-label="Primary navigation">
-          <ul className="flex items-center gap-6">
+        <nav aria-label="Основная навигация" className="hidden md:block">
+          <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
@@ -38,6 +37,11 @@ const SiteHeader = () => {
             ))}
           </ul>
         </nav>
+
+        {/* Action Button */}
+        <button className="hidden sm:block premium-button-primary !py-2 !px-5 text-sm">
+          Начать
+        </button>
       </div>
     </header>
   );
